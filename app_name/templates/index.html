@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+{% load static %}
+{% load custom_tags %}
+{% load custom_filters %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>The Net Cricket</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="{% static '/img/favicon.jpg' %}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Rubik:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/toastr.min.css' %}" media="all">
+    <link href="{% static '/dist/css/lightbox.min.css'%}" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="{% static '/lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static '/lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static '/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{% static '/css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Spinner End -->
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark px-0">
+        <div class="row g-0 d-none d-lg-flex">
+            <div class="col-lg-6 ps-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center text-white">
+                    <span>Follow Us:</span>
+                    <a class="btn btn-link text-light" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-link text-light" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-link text-light" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-link text-light" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6 text-end">
+                <div class="h-100 topbar-right d-inline-flex align-items-center text-white py-2 px-5">
+                    
+                    <span class="fs-5 fw-bold me-2"><i class="fa fa-phone-alt me-2"></i>Call Us:</span>
+                    <span class="fs-5 fw-bold "> <a class="text-white" href="tel:+91 9209159546">+91 9209159546</a></span>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 pe-5">
+        <a href="index.html" class="navbar-brand ps-5 me-0">
+            <h1 class="text-white m-0">The Net Cricket</h1>
+        </a>
+        <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="/home" class="nav-item nav-link active">Home</a>
+                <a href="#services" class="nav-item nav-link">Services</a>
+                <a href="#tieup" class="nav-item nav-link">Good Wishes</a>
+                <a href="#about" class="nav-item nav-link">About</a>
+                <a href="#gallery" class="nav-item nav-link">Gallery</a>
+                <!-- <a href="#testimonial" class="nav-item nav-link">Testimonials</a > -->
+                <a href="#contact" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="" class="btn btn-primary px-3 d-none d-lg-block">Get In Touch</a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Banner Start-->
+    <div class="container-fluid bg-dark" >
+        <div id="header-carousel">
+            <div class="carousel-inner">
+                <div class="" id="carousel" style="height: 500px;"></div>
+                <div id="carousel-item1" >
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 text-center mt-3">
+                                <img class="img-fluid animated slideInDown" src="{% static '/img/white logo.png' %}" alt="" width="300px" >
+                                    </br>
+                                <img class="img-fluid animated slideInLeft" src="{% static '/img/white left bat.png' %}" alt="" width="50px" >
+                                    <a class="text-white animated wow fadeInUp mx-2" href="" style=" animation-delay: 0.5s; animation-duration: 2s">Practice Your Passion</a>
+                                <img class="img-fluid mt-1 animated slideInRight" src="{% static '/img/white right bat.png' %}" alt="" width="50px" >
+                                <div class="col-6 text-center" style="margin:auto;">
+                                    <hr class="wow animated slideInRight text-white" data-wow-delay="0.2s" style="height:3px;">
+                                </div>
+                                <h4 class="text-white text-uppercase animated wow fadeInUp" href="">nagpur's Premier Indoor Cricket facility!</h4>
+                                <p class="text-white text-uppercase animated wow fadeInUp mt-2" href="" style=" animation-delay: 1s; animation-duration: 2s">Open Daily 06:00 am - 09:00 pm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="carousel-item2">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 text-center mt-3">
+                                <h1 class="text-white  animated slideInRight text-uppercase" style="font-family: Teko;">Services at The Net Cricket</h1>
+                                <hr class="wow animated slideInRight" data-wow-delay="0.2s" style="height:3px; color: white;">
+                            </div>
+                            <div class="col-lg-3 col-12  text-center mt-3"  >
+                                <h3 class="fs-3 fw-medium text-primary text-uppercase animated slideInLeft mt-5">Bowling Machine </h3>
+                                <img class="img-fluid mt-1 animated zoomInUp" data-wow-delay="0.5s" src="{% static '/img/st1.png' %}" alt="">
+                            </div>
+                            <div class="col-lg-3 col-12 text-center mt-3"  >
+                                <h3 class="fs-3 fw-medium text-primary text-uppercase animated slideInLeft mt-5">VR Gaming</h3>
+                                <img class="img-fluid mt-1 animated slideInDown" data-wow-delay="0.5s" src="{% static '/img/st2.png' %}" alt="">
+                            </div>
+                            <div class="col-lg-3 col-12 text-center mt-3"  >
+                                <h3 class="fs-3 fw-medium text-primary text-uppercase animated slideInRight mt-5">Box Cricket </h3>
+                                <img class="img-fluid mt-1 animated slideInDown" data-wow-delay="0.5s" src="{% static '/img/st3.png' %}" alt="">
+                            </div>
+                            <div class="col-lg-3 col-12 text-center mt-3"  >
+                                <h3 class="fs-3 fw-medium text-primary text-uppercase animated slideInRight mt-5">Cricket Coaching</h3>
+                                <img class="img-fluid mt-1 animated  zoomInUp" data-wow-delay="0.5s" src="{% static '/img/st4.png' %}" alt="">
+                            </div>
+                            <div class="col-12 text-center mb-5 pt-5">
+                                <a class="text-white text-uppercase animated wow fadeInUp mt-5" href="" style=" animation-delay: 1s; animation-duration: 2s">Check Out More Services Below</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner End-->
+    <!-- Service Start -->
+    <div class="container-xxl mt-2 py-5">
+        <div class="container">
+            <div class="col-12" style='padding-top:60px;' id='services'>&nbsp;</div>
+            <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.5s" style="max-width: 600px;">
+                <p class="fw-medium text-uppercase text-primary mb-2">Our Services</p>
+                <h1 class="display-5 mb-4">We Provide Best Services</h1>
+            </div>
+            <div class="row gy-5 gx-4">
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item">
+                        <img class="img-fluid" src="{% static '/img/s1.png' %}" alt="">
+                        <div class="service-img">
+                            <img class="img-fluid" src="{% static '/img/s1.png' %}" alt="">
+                        </div>
+                        <div class="service-detail">
+                            <div class="service-title">
+                                <hr class="w-25">
+                                <h3 class="mb-0">BOWLING MACHINE</h3>
+                                <hr class="w-25">
+                            </div>
+                            <div class="service-text">
+                                <p class="text-white mb-0">Bowling machines are used in cricket to simulate bowler deliveries, allowing batsmen to practice their batting skills without the need for a human bowler.</p>
+                                </div>
+                            </div>
+                            <a class="btn btn-light" href="javascript:void(0);">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item">
+                            <img class="img-fluid" src="{% static '/img/s2.png' %}" alt="">
+                            <div class="service-img">
+                                <img class="img-fluid" src="{% static '/img/s2.png' %}" alt="">
+                            </div>
+                        <div class="service-detail">
+                            <div class="service-title">
+                                <hr class="w-25">
+                                <h3 class="mb-0">VR GAMING </h3>
+                                <hr class="w-25">
+                            </div>
+                            <div class="service-text">
+                                <p class="text-white mb-0">Players feel like they are inside the game, thanks to 360-degree visuals and spatial audio, making it a highly immersive gaming experience.</p>
+                            </div>
+                        </div>
+                        <a class="btn btn-light" href="javascript:void(0);">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item">
+                        <img class="img-fluid" src="{% static '/img/s3.png' %}" alt="">
+                        <div class="service-img">
+                            <img class="img-fluid" src="{% static '/img/s3.png' %}" alt="">
+                        </div>
+                        <div class="service-detail">
+                            <div class="service-title">
+                                <hr class="w-25">
+                                <h3 class="mb-0">BOX CRICKET</h3>
+                                <hr class="w-25">
+                            </div>
+                            <div class="service-text">
+                                <p class="text-white mb-0">Box Cricket is a dynamic and enjoyable form of cricket that adapts the game to indoor spaces, making it accessible and entertaining for players of all skill levels</p>
+                            </div>
+                        </div>
+                        <a class="btn btn-light" href="javascript:void(0);">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item">
+                        <img class="img-fluid" src="{% static '/img/s4.png' %}" alt="">
+                        <div class="service-img">
+                            <img class="img-fluid" src="{% static '/img/s4.png' %}" alt="">
+                        </div>
+                        <div class="service-detail">
+                            <div class="service-title">
+                                <hr class="w-25">
+                                <h3 class="mb-0">CRICKET COACHING </h3>
+                                <hr class="w-25">
+                            </div>
+                            <div class="service-text">
+                                <p class="text-white mb-0">We focuses on developing various cricketing skills, including batting, bowling, fielding, and wicketkeeping, through structured drills and practice sessions.</p>
+                            </div>
+                        </div>
+                        <a class="btn btn-light" href="javascript:void(0);">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->   
+    <!-- Tie Up Start-->
+    <div class="col-12" style='padding-top:60px;' id='tieup'>&nbsp;</div>
+    <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.5s" style="max-width: 600px;">
+        <p class="fw-medium text-uppercase text-primary mb-2">Good Wishes</p>
+        <h1 class="display-5 mb-5">Wish INDIA For 2023 World Cup</h1>
+    </div>
+    <div class="container-fluid p-5 bg-dark">
+        <div class="row  g-0 justify-content-center mb-5">
+            <div class="col-lg-4 wow fadeInUp "  data-wow-delay="0.2s" >
+                <div class=" h-100" >
+                    <img src="{% static '/img/tieup_trophy.png' %}" class="img-fluid " alt=""  >
+                </div>
+            </div>
+            <div class="col-lg-8 wow fadeInUp"  data-wow-delay="0.2s" style="border: 20px solid #004d44;">
+                <div class="h-100 p-5 net_wall">
+                    <div class="row">
+                        {%  for data in old_data %}
+                            {% if data.name|length > 0 %}
+                            <div class="col-lg-2 col-sm-2 justify-content-center bg_net" data-toggle="tooltip" title="{{ data.message}}" style="cursor: pointer;">
+                              <div class="card bg_none text-center" style="height:110px">
+                                <div class="card-header bg_none">
+                                    <img src="{% static '/img/india ribbon.png' %}" class="img-fluid rounded-circle" alt="" >
+                                    <!-- <img src="{% static '/img/india ribbon.png' %}" class="img-fluid" alt="" width="25px" > -->
+                                </div>
+                                <div class="card-footer bg_none">
+                                    <p class="card-title text-white text-truncate">
+                                        {{ data.name }}
+                                    </p>
+                                </div>
+                              </div>
+                            </div>
+                            {% else %}
+                            <div class="col-lg-2 col-sm-6 justify-content-center bg_net" style="height:110px">
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row g-0 justify-content-center">
+            <div class="col-lg-12 wow fadeInUp"  data-wow-delay="0.2s" >
+                <div class="d-flex justify-content-center">
+                    <form method="POST" class="post-form" action="/tieup" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="row g-3">
+                            <div class="col-4">
+                                <input type="text" name="name" class="form-control bg-light border-0 px-4 tie_form" placeholder="Your Name" style="height: 55px;" autocomplete="off">
+                            </div>
+                            <div class="col-4">
+                                <input type="email" name="email" class="form-control bg-light border-0 px-4 tie_form" placeholder="Your Email" style="height: 55px;" autocomplete="off">
+                            </div>
+                            <div class="col-4">
+                                <input type="text" name="mobile" class="form-control bg-light border-0 px-4 tie_form" placeholder="Your Mobile" style="height: 55px;" autocomplete="off" maxlength="10">
+                            </div>
+                            <div class="col-4">
+                                <input type="text" name="instagram" class="form-control bg-light border-0 px-4 tie_form" placeholder="Your Instagram Id" style="height: 55px;" autocomplete="off">
+                                <!-- <input type="file" id="files" name="image" class="d-none" accept="image/*"  style="height: 55px;" autocomplete="off">
+                                <label class="form-control bg-light border-0 px-4 py-3 text-primary" for="files">Upload Photo</label> -->
+                            </div>
+                            <div class="col-8">
+                                <textarea name="message" class="form-control bg-light border-0 px-4 py-3 tie_form" rows="1" placeholder="Message" maxlength="50"></textarea>
+                            </div>
+                            <div class="col-5 text-center"></div>
+                            <div class="col-2 text-center">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.5s" style="max-width: 700px;">
+                <div class="row g-5 mb-5">
+                    <div class="col-lg-9"><h5 class="text-black">You can tie a physical ribbon as well at our premises just like below people did. 
+                Pay just ₹ 5/- through QR code using UPI and we will tie a ribbon for you. 
+            We will tag you on Instagram and our website.</h5></div>
+                    <div class="col-lg-3"><img class="img-fluid" src="{% static 'img/Gallery/all/qr code.png' %}" alt=""></div>
+
+                </div>
+                 
+            </div>
+            <div class="row g-4">
+                {%  for i in 8|custom_range %}
+                    {% if i > 0 %}
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="team-item">
+                                <img class="img-fluid" src="{% static 'img/Gallery/ribbon/rb_' %}{{ i }}{{'.jpg'}}" alt="">
+                                
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- Tie Up End-->
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-12" style='padding-top:60px;' id='about'>&nbsp;</div>
+                <div class="col-lg-6">
+                    <div class="row gx-3 h-100">
+                        <div class="col-6 align-self-start wow fadeInUp" data-wow-delay="0.1s">
+                            <img class="img-fluid" src="{% static '/img/banner- 1.jpg' %}">
+                        </div>
+                        <div class="col-6 align-self-end wow fadeInDown" data-wow-delay="0.1s">
+                            <img class="img-fluid" src="{% static '/img/banner- 2.jpg' %}">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <p class="fw-medium text-uppercase text-primary mb-2">About Us</p>
+                    <h1 class="display-5 mb-4">We Are Leader In </br>Net Cricket Practice</h1>
+                    <p class="mb-4">Welcome to our cricket haven! Practice your batting skills with our cutting-edge bowling machine in our practice nets. Perfect for individuals, families, and friends to have fun and play cricket. Experience virtual reality cricket games for added entertainment. Join us and unleash your cricketing potential.
+                    </p>
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="ms-4">
+                            <p><i class="fa fa-check text-primary me-2"></i>BOX Cricket</p>
+                            <p><i class="fa fa-check text-primary me-2"></i>Cricket Coaching</p>
+                            <p><i class="fa fa-check text-primary me-2"></i>VR Gaming</p>
+                            <p><i class="fa fa-check text-primary me-2"></i>Bowling Machine</p>
+                        </div>
+                    </div>
+                    <div class="row pt-2">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                                    <i class="fa fa-envelope-open text-white"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <p class="mb-2">Email us</p>
+                                    <h5 class="mb-0">thenetcricket@gmail.com</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                                    <i class="fa fa-phone-alt text-white"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <p class="mb-2">Call us</p>
+                                    <h5 class="mb-0">+91 9209159546</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+    <!-- Gallery Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row"><div class="col-12" style='padding-top:60px;' id='gallery'>&nbsp;</div></div>
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.5s" style="max-width: 600px;">
+                <p class="fw-medium text-uppercase text-primary mb-2">Our Gallery</p>
+                <h1 class="display-5 mb-5"></h1>
+            </div>
+            <div class="row g-4">
+                <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s" >
+                    <div class="team-item">
+                            <div class="d-flex">
+                            <div class="ratio ratio-16x9" style="height:500px">
+                                <iframe class="embed-responsive-item" title="YouTube video player" src="https://www.youtube.com/embed/togEj_L7chw?autoplay=1" id="video_1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
+                                    allowscriptaccess="always" ></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s" >
+                    <div class="team-item">
+                            <div class="d-flex">
+                            <div class="ratio ratio-16x9" style="height:500px">
+                                <iframe class="embed-responsive-item" title="YouTube video player" src="https://www.youtube.com/embed/togEj_L7chw?autoplay=1" id="video_1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
+                                    allowscriptaccess="always" ></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s" >
+                    <div class="team-item">
+                            <div class="d-flex">
+                            <div class="ratio ratio-16x9" style="height:500px">
+                                <iframe class="embed-responsive-item" title="YouTube video player" src="https://www.youtube.com/embed/togEj_L7chw?autoplay=1" id="video_1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
+                                    allowscriptaccess="always" ></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item">
+                            <div class="d-flex">
+                            <div class="ratio ratio-16x9">
+                                <iframe class="embed-responsive-item" title="YouTube video player" src="https://www.youtube.com/embed/EngW7tLk6R8?autoplay=1" id="video_1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
+                                    allowscriptaccess="always" ></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item">
+                            <div class="d-flex">
+                            <div class="ratio ratio-16x9">
+                                <iframe class="embed-responsive-item" title="YouTube video player" src="https://www.youtube.com/embed/EngW7tLk6R8?autoplay=1" id="video_1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
+                                    allowscriptaccess="always" ></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                {%  for i in 13|custom_range %}
+                    {% if i > 0 %}
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="team-item">
+                                <img class="img-fluid" src="{% static 'img/Gallery/Gal_' %}{{ i }}{{'.jpg'}}" alt="">
+                                
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- Gallery End -->
+    <!-- Testimonial Start -->
+<!--     <div class="container-xxl py-5">
+        <div class="container">
+            <div class="col-12" style='padding-top:60px;' id='testimonial'>&nbsp;</div>
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="fw-medium text-uppercase text-primary mb-2">Testimonial</p>
+                <h1 class="display-5 mb-5">What Our Clients Say!</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item text-center">
+                    <div class="testimonial-img position-relative">
+                        <img class="img-fluid rounded-circle mx-auto mb-5" src="{% static '/img/testimonial-1.jpg' %}">
+                        <div class="btn-square bg-primary rounded-circle">
+                            <i class="fa fa-quote-left text-white"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-text text-center rounded p-4">
+                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna
+                            ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea
+                            clita.</p>
+                        <h5 class="mb-1">Client Name</h5>
+                        <span class="fst-italic">Profession</span>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <div class="testimonial-img position-relative">
+                        <img class="img-fluid rounded-circle mx-auto mb-5" src="{% static '/img/testimonial-2.jpg' %}">
+                        <div class="btn-square bg-primary rounded-circle">
+                            <i class="fa fa-quote-left text-white"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-text text-center rounded p-4">
+                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna
+                            ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea
+                            clita.</p>
+                        <h5 class="mb-1">Client Name</h5>
+                        <span class="fst-italic">Profession</span>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <div class="testimonial-img position-relative">
+                        <img class="img-fluid rounded-circle mx-auto mb-5" src="{% static '/img/testimonial-3.jpg' %}">
+                        <div class="btn-square bg-primary rounded-circle">
+                            <i class="fa fa-quote-left text-white"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-text text-center rounded p-4">
+                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna
+                            ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea
+                            clita.</p>
+                        <h5 class="mb-1">Client Name</h5>
+                        <span class="fst-italic">Profession</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Testimonial End -->
+
+    <!-- Contact Us start -->
+    <div class="container-xxl py-5">
+        <div class="container" >
+            <div class="row"><div class="col-lg-3 col-12 " style='padding-top:60px;' id='contact'>&nbsp;</div></div>
+            <div class="text-center mx-auto wow fadeInUp" style="max-width: 600px;">
+                <p class="fw-medium text-uppercase text-primary mb-2">Contact Us</p>
+                <h1 class="display-5 mb-5"></h1>
+            </div>
+            <div class="row g-0 justify-content-center mb-5">
+                <div class="col-lg-7 wow fadeInUp"  data-wow-delay="0.2s">
+                    <div class="bg-primary h-100 p-5">
+                        <form method="POST" class="post-form" action="/contact">
+                            {% csrf_token %}
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <input type="text" name="name" class="form-control bg-light border-0 px-4" placeholder="Your Name" style="height: 55px;" autocomplete="off">
+                                </div>
+                                <div class="col-6">
+                                    <input type="email" name="email" class="form-control bg-light border-0 px-4" placeholder="Your Email" style="height: 55px;" autocomplete="off">
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" name="subject" class="form-control bg-light border-0 px-4" placeholder="Subject" style="height: 55px;" autocomplete="off">
+                                </div>
+                                <div class="col-12">
+                                    <textarea name="message" class="form-control bg-light border-0 px-4 py-3" rows="2" placeholder="Message"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-dark btn-sub w-100 py-3" type="submit" >Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-5 wow fadeInUp"  data-wow-delay="0.2s">
+                    <div class="bg-dark h-100 p-5">
+                        <h2 class="text-white mb-4">Get In Touch</h2>
+                        <div class="d-flex mb-4">
+                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                <i class="bi bi-geo-alt fs-4 text-white"></i>
+                            </div>
+                            <div class="ps-3">
+                                <h5 class="text-white">Our Office</h5>
+                                <span class="text-white">Beltarodi Nagpur, Maharashtra India</span>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-4">
+                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                <i class="bi bi-envelope-open fs-4 text-white"></i>
+                            </div>
+                            <div class="ps-3">
+                                <h5 class="text-white">Email Us</h5>
+                                <span class="text-white">thenetcricket@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                <i class="bi bi-phone-vibrate fs-4 text-white"></i>
+                            </div>
+                            <div class="ps-3">
+                                <h5 class="text-white">Call Us</h5>
+                                <span class="text-white">+91 9209159546</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-12 wow fadeInUp" data-wow-delay="0.3s" style="box-shadow: 0 0 45px rgba(0, 0, 0, .08);">
+                    <iframe class="w-100"
+                        src="https://maps.google.com/maps?q=the net cricket, near dmart beltrodi prithviraj nagar beltarodi&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                        frameborder="0" style="min-height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
+                        tabindex="0"></iframe>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Us End-->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Our Office</h5>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Plot No. 58, Near Dmart Beltarodi Nagpur Maharashtra</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 9209159546</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>thenetcricket@gmail.com</p>
+                    <div class="d-flex pt-3">
+                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i
+                                class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <a class="btn btn-link" href="#about">About Us</a>
+                    <a class="btn btn-link" href="#contact">Contact Us</a>
+                    <a class="btn btn-link" href="#services">Our Services</a>
+                    <a class="btn btn-link" href="javascript:void(0)">Terms & Condition</a>
+                    <a class="btn btn-link" href="javascript:void(0)">Support</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Business Hours</h5>
+                    <p class="mb-1">Monday - Sunday</p>
+                    <h6 class="text-light">06:00 am - 09:00 pm</h6>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Newsletter</h5>
+                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <div class="position-relative w-100">
+                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text"
+                            placeholder="Your email">
+                        <button type="button"
+                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright bg-dark py-4">
+        <div class="container text-center">
+            <p class="mb-2">Copyright 2022 - 2023 &copy; <a class="fw-semi-bold" href="#">The Net Cricket</a>, All Right Reserved.
+            </p>
+            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/
+            <p class="mb-0">Designed By <a class="fw-semi-bold" href="https://htmlcodex.com">HTML Codex</a> Distributed
+                By: <a href="https://themewagon.com">ThemeWagon</a> </p>-->
+        </div>
+    </div>
+    <!-- Copyright End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static '/lib/wow/wow.min.js' %}"></script>
+    <script src="{% static '/lib/easing/easing.min.js' %}"></script>
+    <script src="{% static '/lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static '/lib/owlcarousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static '/lib/counterup/counterup.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/js/toastr.min.js' %}"></script>
+    <script type=" text/javascript">
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": true,
+            "positionClass": "toast-top-right",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "5000",
+            "hideDuration": "5000",
+            "timeOut": "5000",
+            "extendedTimeOut": "5000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+          }
+    </script>
+    {% if messages %}
+        {% for message in messages %}
+            {% if message.tags == 'success'%}
+                <script type=text/javascript>toastr.{{ message.tags }}('{{ message }}')</script>
+            {% elif message.tags == 'info' %}
+                <script type=text/javascript>toastr.{{ message.tags }}('{{ message }}')</script>
+            {% elif message.tags == 'warning' %}
+                <script type=text/javascript>toastr.{{ message.tags }}('{{ message }}')</script>
+            {% elif message.tags == 'error' %}
+                <script type=text/javascript>toastr.{{ message.tags }}('{{ message }}')</script>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    <!-- Template Javascript -->
+    <script src="{% static '/js/main.js' %}"></script>
+    <script>
+    $(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+    $("#carousel-item1").hide();
+    $("#carousel-item2").hide();
+    FirstBanner();
+    setInterval(function(){
+           SecondBanner();
+      setTimeout(FirstBanner,4000);
+     },8000)
+     
+    // $(".nav-link").click(function(){
+    //     $(".nav-link").removeClass("active");
+    //     $(this).addClass("active");
+    // });
+    
+   });
+function FirstBanner(){
+    var carousel_item_html1 = $("#carousel-item1").html();
+    $("#carousel").html("");
+    $("#carousel").html(carousel_item_html1);
+   //console.log("FirstBanner");
+}
+function SecondBanner(){
+    var carousel_item_html2= $("#carousel-item2").html();
+    $("#carousel").html("");
+    $("#carousel").html(carousel_item_html2);
+  //console.log("SecondBanner");
+}
+    </script>
+</body>
+
+</html>
