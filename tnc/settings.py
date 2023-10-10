@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-ck&i%7puq=-4tt84qphcy2^kd-i%ltuatk=9+11fu$*w9ly&d=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.TheNetCricket.app']
 
 
 # Application definition
